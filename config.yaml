@@ -1,0 +1,47 @@
+# Configuration file for SmallSeqFlow Snakemake pipeline
+
+# Data source
+data_url: "https://example.com/path/to/data.gz"  # Replace with actual data URL
+column_filter: null  # Optional column filter, set to null if not needed
+
+# Species for gene ID conversion
+species: "human"
+
+# Sample information
+samples:
+  - "sample1"
+  - "sample2"
+  - "sample3"
+  - "sample4"
+  - "sample5"
+  - "sample6"
+
+# Condition information 
+conditions:
+  treatment:
+    - "sample1"
+    - "sample2"
+    - "sample3"
+  control:
+    - "sample4"
+    - "sample5"
+    - "sample6"
+
+# Define treatment and control samples for differential expression analysis
+treatment_samples:
+  - "sample1"
+  - "sample2"
+  - "sample3"
+
+control_samples:
+  - "sample4"
+  - "sample5"
+  - "sample6"
+
+# Filtering parameters
+min_cpm: 1.0
+min_samples: 2
+
+# Differential expression parameters
+alpha: 0.05
+lfc_threshold: 1.0
