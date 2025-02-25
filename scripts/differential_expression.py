@@ -143,4 +143,6 @@ results_df.to_csv(output_file)
 
 # Save stats as JSON
 with open(output_stats, 'w') as f:
-    json.dump(summary_stats, f, indent=4
+    json.dump(summary_stats, f, indent=4)
+
+print(f"Differential expression analysis complete: {summary_stats['significant_genes']} significant genes identified")
